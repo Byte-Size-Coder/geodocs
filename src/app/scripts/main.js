@@ -134,8 +134,8 @@ geotab.addin.hpgpsFilemanager = function () {
 
             });
 
-            elements.acceptButton.addEventListener('click', () => handleButtonClick('Accept', api));
-            elements.declineButton.addEventListener('click', () => handleButtonClick('Decline', api));
+            elements.acceptButton.addEventListener('click', () => handleButtonClick('Accept', freshApi));
+            elements.declineButton.addEventListener('click', () => handleButtonClick('Decline', freshApi));
             // MUST call initializeCallback when done any setup
             initializeCallback();
         },
