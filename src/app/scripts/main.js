@@ -123,7 +123,7 @@ geotab.addin.hpgpsFilemanager = function () {
                     server: server
                 });
 
-                const eulaAcceptanceStatus = await isEulaAccepted(sessionInfo.userName, addinId, api);
+                const eulaAcceptanceStatus = await isEulaAccepted(sessionInfo.userName, addinId, freshApi);
 
                 if (!eulaAcceptanceStatus) {
                     showModal(true);
@@ -160,7 +160,7 @@ geotab.addin.hpgpsFilemanager = function () {
                 // show main content
                 const container = document.getElementById('app');
 
-                const eulaAcceptanceStatus = await isEulaAccepted(sessionInfo.userName, addinId, api);
+                const eulaAcceptanceStatus = await isEulaAccepted(sessionInfo.userName, addinId, freshApi);
                 //const eulaAcceptanceStatus = true;
                 if (container && eulaAcceptanceStatus) {
                     const root = createRoot(container);
